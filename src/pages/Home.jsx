@@ -27,14 +27,17 @@ export default function Home() {
 
       <main id="main">
         <section className="hero">
-          <div className="hero__media media-placeholder media-placeholder--hero" aria-hidden="true" />
+          <div className="hero__media" aria-hidden="true" />
           <div className="hero__overlay">
             <div className="container hero__content">
               <h1>Confluence Rwanda</h1>
-              <p className="hero__subtitle">Explore assistive technology projects connected to local needs, community input, and collaborative partnerships across Rwanda.</p>
+              <p className="hero__subtitle">A country-level hub for documenting local needs, mapping resources and gaps, connecting partners, and supporting sustainable assistive technology innovation in Rwanda.</p>
+              <p className="hero__tagline">Rwanda is the first Confluence country implementation. Future hubs will focus on additional Sub-Saharan African countries.</p>
               <div className="hero__actions">
-                <Link to="/projects" className="btn btn--primary">View Rwanda Projects</Link>
-                <a href="#community" className="btn btn--secondary btn--on-media">Explore the Community Hub</a>
+                <a href="#map" className="btn btn--primary">Explore Rwanda GIS Map</a>
+                <Link to="/projects" className="btn btn--secondary btn--on-media">View Rwanda Projects</Link>
+                <a href="#share-narrative" className="btn btn--secondary btn--on-media">Share a Narrative or Local Need</a>
+                <a href="#partners" className="btn btn--secondary btn--on-media">Find Local Partners</a>
               </div>
             </div>
           </div>
