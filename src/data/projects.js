@@ -2,7 +2,7 @@
    Mock content for the Rwanda hub — shared by the list page and the detail
    page so the three screens behave like one connected, data-driven app.
    ========================================================================== */
-window.RWANDA_PROJECTS = [
+export const projects = [
   {
     id: "wheelchair-design",
     title: "Low-Cost Wheelchair Design for Local Materials",
@@ -208,6 +208,6 @@ window.RWANDA_PROJECTS = [
   }
 ];
 
-window.getProjectById = function (id) {
-  return window.RWANDA_PROJECTS.find(function (p) { return p.id === id; });
-};
+export function getProjectById(id) {
+  return projects.find((p) => p.id === id);
+}

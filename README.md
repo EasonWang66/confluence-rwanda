@@ -8,25 +8,25 @@ This build highlights three core interfaces of the Confluence platform — the c
 
 ## Link to Live Demo
 
-[https://confluence-rwanda.vercel.app/index.html](https://confluence-rwanda.vercel.app/index.html)
+[https://confluence-rwanda.vercel.app/](https://confluence-rwanda.vercel.app/)
 
 ## Tools and Technologies Used
 
-- **HTML5** — semantic, accessible markup across all three views
+- **React** — component-based architecture across all three views
+- **React Router** — client-side routing (`/`, `/projects`, `/projects/:id`)
+- **Vite** — build tooling and dev server
 - **CSS3** — custom properties (design tokens), Flexbox, CSS Grid, mobile-first responsive design with tiered breakpoints
-- **JavaScript (Vanilla)** — DOM rendering, client-side search/filtering, tabbed navigation, dynamic routing via URL query parameters
 - **Figma** — source of truth for design, translated to code via Figma's Dev Mode MCP server
 - **Git & GitHub** — version control
-- **Vercel** — static hosting and continuous deployment
-- **Google Fonts (Inter)** — typography
+- **Vercel** — hosting and deployment
 
 ## Pages
 
-- `index.html` — Home: hero, platform overview, impact stats, featured projects, community narratives, ecosystem map, community resources.
-- `projects.html` — Project discovery: live search and filtering by type/stage across the shared dataset.
-- `project.html?id=<project-id>` — Project detail: dynamically rendered from a shared dataset, including tabs, sidebar metadata, participants, and a sustainability checklist.
+- `/` — Home: hero, platform overview, impact stats, featured projects, community narratives, ecosystem map, community resources.
+- `/projects` — Project discovery: live search and filtering by type/stage across the shared dataset.
+- `/projects/:id` — Project detail: dynamically rendered from a shared dataset, including tabs, sidebar metadata, participants, and a sustainability checklist.
 
-All three pages read from one shared dataset (`js/data.js`), so navigating between them behaves like a connected application rather than static mockups.
+All three pages read from one shared dataset (`src/data/projects.js`), so navigating between them behaves like a connected application rather than static mockups.
 
 ## Responsive Strategy
 
@@ -36,21 +36,37 @@ Built mobile-first with three tiers:
 - **≥700px (tablet)** — 2-column card grids.
 - **≥1200px (desktop)** — full layout: horizontal nav, 3-column grids, 4-column stat grid, sidebar alongside main content.
 
+## Getting Started
+
+```
+npm install
+npm run dev
+```
+
+Build for production:
+
+```
+npm run build
+```
+
 ## Project Structure
 
 ```
 confluence-rwanda/
-  index.html / projects.html / project.html
-  css/
-    tokens.css       design tokens (color, type, spacing)
-    base.css         reset, typography, layout/grid utilities
-    components.css   header/nav, footer, buttons, badges, cards, tabs...
-    home.css / projects.css / detail.css   page-specific layout
-  js/
-    data.js          shared project dataset
-    main.js           nav toggle, icons, shared card renderer
-    projects.js       search/filter logic for the list page
-    detail.js         populates the detail page from the URL + dataset
-  img/
-    logo.svg          brand mark
+  index.html            Vite entry point
+  vite.config.js
+  vercel.json            SPA rewrite so deep links work on Vercel
+  src/
+    main.jsx             React root, imports all global CSS
+    App.jsx              Routes: "/", "/projects", "/projects/:id"
+    data/projects.js      shared project dataset
+    components/           Header, Footer, ProjectCard, Icon
+    pages/                Home, ProjectList, ProjectDetail
+    styles/
+      tokens.css          design tokens (color, type, spacing)
+      base.css            reset, typography, layout/grid utilities
+      components.css      header/nav, footer, buttons, badges, cards, tabs...
+      home.css / projects.css / detail.css   page-specific layout
+  public/
+    logo.svg              brand mark
 ```
