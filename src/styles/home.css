@@ -7,7 +7,7 @@
 .hero__media {
   aspect-ratio: 3 / 4;
   background-color: var(--color-primary);
-  background-image: url("/hero-rwanda.jpg");
+  background-image: url("/hero-rwanda.png");
   background-size: cover;
   background-position: center;
 }
