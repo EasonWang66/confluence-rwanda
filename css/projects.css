@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Project list page — mobile-first, desktop overrides at 1200px
+   ========================================================================== */
+.welcome-hero { position: relative; padding: 0; }
+.welcome-hero__media { aspect-ratio: 16 / 9; }
+.welcome-hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(14,33,25,.35) 0%, rgba(14,33,25,.75) 100%);
+  color: #fff;
+  text-align: center;
+}
+.welcome-hero__overlay .container { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); }
+.welcome-hero h1 { font-size: var(--fs-3xl); color: #fff; }
+.welcome-hero p { max-width: 44ch; color: rgba(255,255,255,.9); }
+
+.results-count { font-size: var(--fs-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+
+.project-card__title { margin-block: var(--space-3) var(--space-2); font-size: var(--fs-md); }
+.project-card__meta { font-size: var(--fs-xs); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+.project-card__support {
+  font-size: var(--fs-xs);
+  background: var(--color-tag-neutral-bg);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  margin-block: var(--space-3);
+}
+.project-card__actions { display: flex; gap: var(--space-2); margin-top: var(--space-3); }
+.project-card__actions .btn { flex: 1; }
+.project-card__badges { margin-bottom: var(--space-1); }
+
+.empty-state {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-8) 0;
+}
+
+.list-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+}
+
+@media (min-width: 1200px) {
+  .welcome-hero__media { aspect-ratio: 32 / 9; }
+  .list-actions { flex-direction: row; justify-content: center; }
+}

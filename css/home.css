@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Home page — mobile-first, desktop overrides at 1200px
+   ========================================================================== */
+
+/* ---- Hero ---- */
+.hero { position: relative; }
+.hero__media { aspect-ratio: 3 / 4; }
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(14,33,25,0) 30%, rgba(14,33,25,0.85) 100%);
+}
+.hero__content { padding-block: var(--space-6); color: #fff; }
+.hero h1 { font-size: var(--fs-3xl); color: #fff; margin-bottom: var(--space-3); }
+.hero__subtitle { max-width: 46ch; margin-bottom: var(--space-5); color: rgba(255,255,255,0.9); }
+.hero__actions { display: flex; flex-direction: column; gap: var(--space-3); }
+.btn--on-media { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.5); color: #fff; backdrop-filter: blur(2px); }
+.btn--on-media:hover { background: rgba(255,255,255,0.22); }
+
+/* ---- Overview ---- */
+.overview__grid { display: grid; gap: var(--space-6); }
+.overview__media { aspect-ratio: 4 / 3; border-radius: var(--radius-lg); }
+.overview__copy h2 { margin-bottom: var(--space-4); }
+.overview__copy p { margin-bottom: var(--space-4); color: var(--color-text-muted); }
+
+/* ---- Impact stats ---- */
+.impact__grid { grid-template-columns: repeat(2, 1fr); }
+
+/* ---- Projects preview ---- */
+.projects-preview__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.project-card__title { margin-block: var(--space-3) var(--space-2); font-size: var(--fs-md); }
+.project-card__meta { font-size: var(--fs-xs); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+.project-card__support {
+  font-size: var(--fs-xs);
+  background: var(--color-tag-neutral-bg);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  margin-block: var(--space-3);
+}
+.project-card__actions { display: flex; gap: var(--space-2); margin-top: var(--space-3); }
+.project-card__actions .btn { flex: 1; }
+
+/* ---- Narratives ---- */
+.narrative-card__related {
+  font-size: var(--fs-xs);
+  background: var(--color-tag-neutral-bg);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  margin-block: var(--space-3);
+}
+.narrative-card h3 { margin-block: var(--space-3) var(--space-2); }
+.narratives__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.narratives__links a:hover { text-decoration: underline; }
+
+/* ---- Ecosystem map ---- */
+.ecosystem__layout { display: flex; flex-direction: column; gap: var(--space-6); }
+.ecosystem__legend ul { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4); font-size: var(--fs-sm); }
+.ecosystem__legend li { display: flex; align-items: center; gap: var(--space-3); }
+.legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+.legend-dot--a { background: #2f9e44; }
+.legend-dot--b { background: #4f8ef7; }
+.legend-dot--c { background: #b5551c; }
+.legend-dot--d { background: #d64545; }
+.legend-dot--e { background: #7b5ed6; }
+.legend-dot--f { background: #c9a227; }
+.ecosystem__map { border-radius: var(--radius-lg); aspect-ratio: 4 / 3; }
+.ecosystem__selected-label { font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--color-text-muted); margin-bottom: var(--space-3); }
+.ecosystem__selected .media-placeholder { margin-block: var(--space-3); border-radius: var(--radius-sm); }
+.ecosystem__selected h3 { margin-bottom: var(--space-2); }
+.ecosystem__selected p { margin-bottom: var(--space-3); }
+.ecosystem__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.ecosystem__actions a:hover { text-decoration: underline; }
+
+/* ---- Community ---- */
+.community__intro { color: var(--color-text-muted); max-width: 70ch; margin-block: var(--space-3) var(--space-6); }
+.resource-card h3 { margin-block: var(--space-3) var(--space-4); font-size: var(--fs-md); }
+.community__actions { display: flex; justify-content: center; margin-top: var(--space-6); }
+
+/* ==========================================================================
+   Desktop ( >= 1200px ) — matches the Figma layout
+   ========================================================================== */
+@media (min-width: 1200px) {
+  .hero__media { aspect-ratio: 21 / 9; }
+  .hero__overlay { align-items: center; }
+  .hero__content { max-width: 640px; padding-block: 0; }
+  .hero h1 { font-size: var(--fs-4xl); }
+  .hero__actions { flex-direction: row; }
+
+  .overview__grid { grid-template-columns: 1fr 1fr; align-items: center; gap: var(--space-8); }
+
+  .impact__grid { grid-template-columns: repeat(4, 1fr); }
+
+  .projects-preview__actions { flex-direction: row; justify-content: center; }
+
+  .narratives__links { flex-direction: row; justify-content: center; gap: var(--space-6); }
+
+  .ecosystem__layout {
+    display: grid;
+    grid-template-columns: 240px 1fr 260px;
+    gap: var(--space-6);
+    align-items: start;
+  }
+  .ecosystem__map { aspect-ratio: auto; height: 384px; }
+  .ecosystem__actions { flex-direction: row; justify-content: center; }
+
+  .community__intro { margin-inline: auto; text-align: left; }
+}

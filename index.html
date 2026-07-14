@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confluence Rwanda — Assistive Technology Innovation Hub</title>
+  <meta name="description" content="Explore assistive technology projects, local narratives, and partnerships connected to Rwanda's Confluence hub." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__bar">
+        <div class="site-header__top">
+          <a href="index.html" class="brand"><span class="brand__mark" aria-hidden="true"></span>Confluence</a>
+          <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"></button>
+        </div>
+        <nav class="site-nav" data-nav id="primary-nav" aria-label="Primary">
+          <div class="site-nav__links">
+            <a href="index.html" aria-current="page">Rwanda Hub</a>
+            <a href="projects.html">Projects</a>
+            <a href="#community">Community</a>
+            <a href="#map">Ecosystem Map</a>
+          </div>
+          <div class="site-nav__cta">
+            <a href="#signin" class="btn btn--primary">Sign In</a>
+          </div>
+        </nav>
+      </div>
+      <p class="breadcrumb"><span class="breadcrumb__current">Confluence Rwanda</span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__media media-placeholder media-placeholder--hero" aria-hidden="true"></div>
+      <div class="hero__overlay">
+        <div class="container hero__content">
+          <h1>Confluence Rwanda</h1>
+          <p class="hero__subtitle">Explore assistive technology projects connected to local needs, community input, and collaborative partnerships across Rwanda.</p>
+          <div class="hero__actions">
+            <a href="projects.html" class="btn btn--primary">View Rwanda Projects</a>
+            <a href="#community" class="btn btn--secondary btn--on-media">Explore the Community Hub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section overview">
+      <div class="container overview__grid">
+        <div class="media-placeholder overview__media" aria-hidden="true"></div>
+        <div class="overview__copy">
+          <h2>Rwanda Overview</h2>
+          <p>Rwanda serves as the first Confluence country hub, piloting how locally-led assistive technology projects can be documented, supported, and connected with partners and makers across the region.</p>
+          <p>Local context shapes every aspect of the platform — from the materials available to local fabricators, to the terrain wheelchairs must handle, to the languages narratives are recorded in. Every project here starts with a community-identified need.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact snapshot -->
+    <section class="section section--tight impact">
+      <div class="container">
+        <h2 class="section-heading impact__heading">Rwanda Impact Snapshot</h2>
+        <div class="grid impact__grid">
+          <div class="stat-card"><div class="stat-card__value">89</div><div class="stat-card__label">Lived experience narratives documented</div></div>
+          <div class="stat-card"><div class="stat-card__value">127</div><div class="stat-card__label">Community needs mapped</div></div>
+          <div class="stat-card"><div class="stat-card__value">42</div><div class="stat-card__label">Organizations and partners mapped</div></div>
+          <div class="stat-card"><div class="stat-card__value">24</div><div class="stat-card__label">Active projects</div></div>
+          <div class="stat-card"><div class="stat-card__value">6</div><div class="stat-card__label">GIS layers created</div></div>
+          <div class="stat-card"><div class="stat-card__value">18</div><div class="stat-card__label">Local partners active</div></div>
+          <div class="stat-card"><div class="stat-card__value">35</div><div class="stat-card__label">Knowledge Hub resources shared</div></div>
+          <div class="stat-card"><div class="stat-card__value">8</div><div class="stat-card__label">Projects seeking support</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rwanda Projects -->
+    <section class="section projects-preview">
+      <div class="container">
+        <h2 class="section-heading">Rwanda Projects</h2>
+        <div class="grid grid--3-desktop" id="home-projects"></div>
+        <div class="projects-preview__actions">
+          <a href="projects.html" class="btn btn--secondary">View All Rwanda Projects</a>
+          <a href="projects.html#start" class="btn btn--primary">Start a Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narratives -->
+    <section class="section narratives">
+      <div class="container">
+        <h2 class="section-heading">Lived Experience Narratives &amp; Context</h2>
+        <div class="grid grid--3-desktop">
+          <article class="card narrative-card">
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <div class="card__body">
+              <div class="badge-row"><span class="badge badge--green">Assistive Technology Development</span><span class="badge badge--neutral">&bull; Pilot / Field Testing</span></div>
+              <h3>Transportation barriers in Kigali</h3>
+              <p class="text-muted">Limited accessible public transport options create daily mobility challenges for wheelchair users travelling across the city.</p>
+              <p class="narrative-card__related">Related project: Urban Mobility AT Project</p>
+              <a href="#narrative-1" class="btn btn--secondary btn--block btn--sm">View Narrative</a>
+            </div>
+          </article>
+          <article class="card narrative-card">
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <div class="card__body">
+              <div class="badge-row"><span class="badge badge--neutral">Eastern Province</span><span class="badge badge--neutral">&bull; Planning</span></div>
+              <h3>Need for local wheelchair maintenance</h3>
+              <p class="text-muted">Distance to repair services and the cost of replacement parts leave many wheelchairs out of service for weeks at a time.</p>
+              <p class="narrative-card__related">Related project: Community Repair Training</p>
+              <a href="#narrative-2" class="btn btn--secondary btn--block btn--sm">View Narrative</a>
+            </div>
+          </article>
+          <article class="card narrative-card">
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <div class="card__body">
+              <div class="badge-row"><span class="badge badge--neutral">GIS Mapping &amp; Data Infrastructure</span><span class="badge badge--neutral">&bull; In Progress</span></div>
+              <h3>Hearing aid battery availability</h3>
+              <p class="text-muted">Inconsistent access to batteries and limited information on where to find them affects daily hearing aid use.</p>
+              <a href="#narrative-3" class="btn btn--secondary btn--block btn--sm">View Narrative</a>
+            </div>
+          </article>
+        </div>
+        <div class="narratives__links">
+          <a href="#narratives">Explore Rwanda Narratives &amp; Context</a>
+          <a href="#share-narrative">Share a Narrative or Local Need</a>
+          <a href="#map">View Narratives on the Rwanda Map</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem map -->
+    <section class="section ecosystem" id="map">
+      <div class="container">
+        <h2 class="section-heading">Rwanda Ecosystem Map</h2>
+        <div class="ecosystem__layout">
+          <div class="ecosystem__legend">
+            <h3>Map Layers</h3>
+            <ul>
+              <li><span class="legend-dot legend-dot--a"></span>Lived Experience Narratives &amp; Context</li>
+              <li><span class="legend-dot legend-dot--b"></span>Community Needs</li>
+              <li><span class="legend-dot legend-dot--c"></span>Organizations / Local Partners</li>
+              <li><span class="legend-dot legend-dot--d"></span>Service Gaps</li>
+              <li><span class="legend-dot legend-dot--e"></span>Project Sites</li>
+              <li><span class="legend-dot legend-dot--f"></span>Local Makers / Materials</li>
+            </ul>
+          </div>
+          <div class="media-placeholder media-placeholder--map ecosystem__map" aria-hidden="true"></div>
+          <div class="card ecosystem__selected">
+            <div class="card__body">
+              <p class="ecosystem__selected-label">Selected Item</p>
+              <div class="media-placeholder media-placeholder--square" aria-hidden="true"></div>
+              <h3>Wheelchair repair service gap</h3>
+              <p class="text-muted">Kigali District &mdash; Urban area</p>
+              <a href="project.html?id=wheelchair-design" class="btn btn--primary btn--block btn--sm">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="ecosystem__actions">
+          <a href="#gis-map">Open Rwanda GIS Map</a>
+          <a href="#validate-data">Add or Validate Local Data</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="section community" id="community">
+      <div class="container">
+        <h2 class="section-heading">Community and Collaboration</h2>
+        <p class="community__intro">Practice guides, training resources, and lessons learned from projects across Rwanda, shared so future teams don't have to start from zero.</p>
+        <div class="grid grid--3-desktop">
+          <article class="card resource-card">
+            <div class="card__body">
+              <span class="badge badge--neutral">Practice Guide</span>
+              <h3>Co-Design with Wheelchair Users: Field Guide</h3>
+              <a href="#resource-1" class="btn btn--secondary btn--block btn--sm">View Resource</a>
+            </div>
+          </article>
+          <article class="card resource-card">
+            <div class="card__body">
+              <span class="badge badge--neutral">Resource Directory</span>
+              <h3>Local Materials for AT Fabrication: Rwanda Directory</h3>
+              <a href="#resource-2" class="btn btn--secondary btn--block btn--sm">View Resource</a>
+            </div>
+          </article>
+          <article class="card resource-card">
+            <div class="card__body">
+              <span class="badge badge--neutral">Training Resource</span>
+              <h3>Community-Based Hearing Aid Maintenance: Training Guide</h3>
+              <a href="#resource-3" class="btn btn--secondary btn--block btn--sm">View Resource</a>
+            </div>
+          </article>
+        </div>
+        <div class="community__actions">
+          <a href="#knowledge-hub" class="btn btn--dark">Browse Rwanda Knowledge Hub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#about">About Confluence</a></li>
+            <li><a href="#faq">Help / FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#hubs">Country Hubs</a></li>
+            <li><a href="#knowledge-hub">Knowledge Hub</a></li>
+            <li><a href="#funding">Funding</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#responsible-data">Responsible Data</a></li>
+            <li><a href="#report">Report a Problem</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Confluence</h4>
+          <p class="text-muted" style="color:rgba(255,255,255,.7); font-size: var(--fs-sm);">A global network connecting local assistive technology innovation hubs.</p>
+        </div>
+      </div>
+      <p class="site-footer__bottom">&copy; <span data-year></span> Confluence Global Assistive Technology Innovation Hub.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.querySelector("[data-nav-toggle]");
+      if (toggle) toggle.innerHTML = window.ICONS.menu;
+
+      var featuredIds = ["wheelchair-design", "hearing-aid-maintenance-training", "at-service-gaps-mapping"];
+      var host = document.getElementById("home-projects");
+      host.innerHTML = featuredIds
+        .map(function (id) { return window.getProjectById(id); })
+        .filter(Boolean)
+        .map(function (p) { return window.renderProjectCard(p, { compact: true }); })
+        .join("");
+    });
+  </script>
+</body>
+</html>
