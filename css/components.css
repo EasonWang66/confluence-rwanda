@@ -90,10 +90,9 @@
   color: var(--color-primary);
 }
 .brand__mark {
-  width: 30px; height: 30px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  width: 28px; height: 28px;
   flex-shrink: 0;
+  display: block;
 }
 
 .nav-toggle {
