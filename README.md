@@ -1,26 +1,42 @@
 # Confluence Rwanda
 
-A responsive, data-driven build of the three connected "Confluence Rwanda" screens from your Figma file (Home / Project List / Project Detail). Built as a dependency-free static site — no build step, no npm install — so it opens anywhere and is trivial to deploy (drag the folder onto Netlify/Vercel/GitHub Pages, or open `index.html` directly).
+## Description
+
+This project showcases part of my contribution to the development of **Confluence**, an assistive technology innovation platform, during my role as Lead Developer at Georgia Tech's Center for Inclusive Design and Innovation (CIDI). In that role, I managed the center's GitHub infrastructure, established the platform's design system, and led its development from initial concept to first release (0→1).
+
+This build highlights three core interfaces of the Confluence platform — the country hub landing page, project discovery, and project detail views — with a focus on **scalability** (a fully responsive layout spanning a 1200px+ desktop experience down to a mobile viewport) and **accessibility** (semantic HTML, keyboard-navigable interactions, ARIA labeling, visible focus states, and skip-to-content support).
+
+## Link to Live Demo
+
+[https://confluence-rwanda.vercel.app/index.html](https://confluence-rwanda.vercel.app/index.html)
+
+## Tools and Technologies Used
+
+- **HTML5** — semantic, accessible markup across all three views
+- **CSS3** — custom properties (design tokens), Flexbox, CSS Grid, mobile-first responsive design with tiered breakpoints
+- **JavaScript (Vanilla)** — DOM rendering, client-side search/filtering, tabbed navigation, dynamic routing via URL query parameters
+- **Figma** — source of truth for design, translated to code via Figma's Dev Mode MCP server
+- **Git & GitHub** — version control
+- **Vercel** — static hosting and continuous deployment
+- **Google Fonts (Inter)** — typography
 
 ## Pages
 
-- `index.html` — Home ("Confluence Rwanda"): hero, overview, impact stats, featured projects, narratives, ecosystem map, community resources.
-- `projects.html` — Project list: live search + filter by type/stage over the shared dataset, links into each project.
-- `project.html?id=<project-id>` — Project detail: reads the `id` query param, pulls the matching record from `js/data.js`, and renders tabs, sidebar, participants, sustainability checklist. Falls back to the wheelchair project if no id is given, so the page is never empty.
+- `index.html` — Home: hero, platform overview, impact stats, featured projects, community narratives, ecosystem map, community resources.
+- `projects.html` — Project discovery: live search and filtering by type/stage across the shared dataset.
+- `project.html?id=<project-id>` — Project detail: dynamically rendered from a shared dataset, including tabs, sidebar metadata, participants, and a sustainability checklist.
 
-All three pages share one project dataset (`js/data.js`, 6 projects) — clicking any card on the home page or list page carries you to a fully populated detail page, so the flow behaves like a real connected app rather than three disconnected mockups.
+All three pages read from one shared dataset (`js/data.js`), so navigating between them behaves like a connected application rather than static mockups.
 
-## Responsive strategy (the scalability piece)
+## Responsive Strategy
 
-Built mobile-first, with two breakpoints matching what you asked for, plus a light tablet step in between:
+Built mobile-first with three tiers:
 
-- **Base (mobile)** — tuned around an iPhone-width viewport (~390–430px): single-column stacked layout, hamburger nav, sidebar drops below main content on the detail page, tab bar scrolls horizontally.
+- **Base (mobile, ~390–430px)** — single-column layout, hamburger navigation, stacked sidebar, horizontally scrollable tabs.
 - **≥700px (tablet)** — 2-column card grids.
-- **≥1200px (desktop)** — matches the Figma layout: horizontal nav, 3-column project/narrative/resource grids, 4-column stat grid, sidebar sits beside the main content on the detail page.
+- **≥1200px (desktop)** — full layout: horizontal nav, 3-column grids, 4-column stat grid, sidebar alongside main content.
 
-To preview: open in Chrome, then use DevTools' device toolbar and pick "iPhone 14/15" for the mobile view, or just widen the window past 1200px for desktop.
-
-## Structure
+## Project Structure
 
 ```
 confluence-rwanda/
@@ -35,8 +51,6 @@ confluence-rwanda/
     main.js           nav toggle, icons, shared card renderer
     projects.js       search/filter logic for the list page
     detail.js         populates the detail page from the URL + dataset
+  img/
+    logo.svg          brand mark
 ```
-
-## Note on imagery
-
-The sandbox this was built in couldn't reach Figma's asset CDN to pull the real photos, so photo/map spots use styled gradient placeholders instead of the source images. Everything else (copy, structure, spacing, interactions) is built from the Figma file. Swap in real photography by replacing the `.media-placeholder` divs with `<img>` tags — the aspect ratios are already set up for each spot.
